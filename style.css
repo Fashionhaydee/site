@@ -1,0 +1,178 @@
+
+/* 基础排版 */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1em;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1.2em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Banner 区域 */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  gap: 2em;
+  background: #fff;
+}
+
+.banner-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.banner-right {
+  max-width: 500px;
+}
+
+.banner-right h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.6em 1.4em;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* About */
+#about, #services, #gallery, #contact {
+  padding: 3em 2em;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.studio-photos {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.studio-photos img {
+  width: 48%;
+  border-radius: 8px;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Contact */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#contact input, #contact textarea {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+#contact button {
+  width: fit-content;
+  padding: 0.7em 1.6em;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background: #f4f4f4;
+  padding: 2em 1em;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.footer-links a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ✅ 响应式布局优化 */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .studio-photos {
+    flex-direction: column;
+  }
+
+  .studio-photos img {
+    width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    padding: 0.5em;
+  }
+
+  nav ul li {
+    margin: 0.5em;
+  }
+}
